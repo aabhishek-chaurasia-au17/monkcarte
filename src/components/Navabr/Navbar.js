@@ -1,15 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import { GiHamburgerMenu } from 'react-icons/gi';
 // import { MdOutlineRestaurantMenu } from 'react-icons/md';
 import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
 import Logo from '../../assets/logo-black.png';
 import './navbar.css';
+import Subnavbar from '../SubMenu/Subnavbar';
+
 
 const Navbar = () => {
   // const [toggleMenu, setToggleMenu] = React.useState(false);
+  const [ scrolled, setScrolled ] = useState(true)
+  
+  useEffect(_ => {
+    const handleScroll = _ => { 
+      if (window.pageYOffset > 1) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return _ => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [scrolled])
+
   return (
     <div>
-    <nav className="app__navbar">
+    {!scrolled && <nav className="app__navbar">
       <div className="app__navbar-logo">
         <img src={Logo} alt="app__logo" />
       </div>
@@ -42,8 +60,10 @@ const Navbar = () => {
           </div>
         )}
       </div> */}
-    </nav>
+    </nav>}
+    {scrolled && <Subnavbar/>}
     </div>
+
   );
 };
 

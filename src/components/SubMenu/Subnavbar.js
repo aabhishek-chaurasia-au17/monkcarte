@@ -1,44 +1,48 @@
 import React from 'react'
+import { FaUserAlt, FaShoppingCart } from "react-icons/fa";
 import { Link } from 'react-router-dom'
+import Logo from '../../assets/logo-black.png'
+
 
 const Subnavbar = () => {
   return (
     <>
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container-fluid">
-                <Link className="navbar-brand" to="/">NewsMonkey</Link>
+    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+            <div className="container-fluid px-5">
+                <Link className="navbar-brand" to="/">
+                  <img src={Logo} width="100" alt="logo" />
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                <ul className="navbar-nav m-auto mb-2 mb-lg-0">
                     <li className="nav-item">
-                    <Link className="nav-link" aria-current="page" to="/">Home</Link>
+                    <Link className="nav-link" aria-current="page" to="/">HOME</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/business">business</Link>
+                    <Link className="nav-link px-4" to="/women">WOMEN</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/entertainment">entertainment</Link>
+                    <Link className="nav-link px-4" to="/men">MEN</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/general">general</Link>
+                    <Link className="nav-link px-4" to="/kids">KIDS</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/health">health</Link>
+                    <Link className="nav-link px-4" to="/about">ABOUT</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/science">science</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" to="/sports">sports</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" to="/technology">technology</Link>
+                    <Link className="nav-link" to="/contact">CONTACT</Link>
                     </li>
                 </ul>
-
-                </div>
+              </div>
+              <Link className="navbar-brand" to="/">
+                  <FaUserAlt/>
+                </Link>
+                <Link className="navbar-brand px-4" to="/">
+                  <FaShoppingCart/>
+                </Link>
             </div>
         </nav>
         </>
