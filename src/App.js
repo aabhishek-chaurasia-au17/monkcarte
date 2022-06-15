@@ -1,21 +1,23 @@
 import './App.css';
 
-// import {
-//   BrowserRouter,
-//   Routes,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
-import Navbar from '../src/components/Navabr/Navbar';
-import Banner from './components/Banner/Banner'
+import Navbar from './components/Navabr/Navbar';
+import Banner from './components/Banner/Banner';
 import Subnavbar from './components/SubMenu/Subnavbar';
 
 function App() {
   return (
     <>
+    
+    <BrowserRouter>
     <Navbar/>
     <Banner/>
-    {/* <BrowserRouter>
+    <Subnavbar/>
     <Routes>
       <Route path="/" >
         <Route index />
@@ -26,8 +28,8 @@ function App() {
         </Route>
       </Route>
     </Routes>
-  </BrowserRouter> */}
-  <Subnavbar/>
+  </BrowserRouter>
+  
     </>
   );
 }
