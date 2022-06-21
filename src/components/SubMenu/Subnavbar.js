@@ -7,7 +7,7 @@ import Logo from '../../assets/logo-black.png'
 const Subnavbar = () => {
   return (
     <>
-    <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light shadow-sm">
             <div className="container-fluid px-5">
                 <Link className="navbar-brand" to="/">
                   <img src={Logo} width="100" alt="logo" />
