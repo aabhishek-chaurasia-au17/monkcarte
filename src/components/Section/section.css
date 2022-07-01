@@ -1,0 +1,40 @@
+.imgStyle{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.product-displayer {
+    height: 210px;
+}
+
+
+.product-image {
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.bgWomen{
+    background-image: url(../../assets/hero-women.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.bgMen{
+    background-image: url(../../assets/hero-men.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.bgKid{
+    background-image: url(../../assets/hero-kid.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
